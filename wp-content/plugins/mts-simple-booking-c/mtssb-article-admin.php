@@ -66,7 +66,7 @@ class MTSSB_Article_Admin extends MTSSB_Article {
 	 * Add Meta Box of Room's Custom fields
 	 *
 	 */
-	public function register_meta_box() {
+	public function register_meta_box($post) {
 		add_meta_box($this->module_name . '_timetable', __('Booking Timetable', $this->domain),
 			array($this, 'meta_box_timetable'), self::POST_TYPE, 'normal', 'low');
 		add_meta_box($this->module_name . '_provision', __('Booking Provisions', $this->domain), 
